@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Lux - Clínica Dental</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="https://via.placeholder.com/32" alt="Logo" class="logo-img">
+        <span class="logo-text">Dental Lux</span>
+      </div>
+      <nav class="nav-desktop">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#testimonios" class="nav-link">Testimonios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-outline" id="auth-btn">
+          <i class="fas fa-user"></i>
+          <span>Acceder</span>
+        </button>
+        <button class="btn btn-primary" id="appointment-btn">Agendar Cita</button>
+      </div>
+      <button class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-container">
+      <a href="#inicio" class="mobile-link">Inicio</a>
+      <a href="#servicios" class="mobile-link">Servicios</a>
+      <a href="#nosotros" class="mobile-link">Nosotros</a>
+      <a href="#testimonios" class="mobile-link">Testimonios</a>
+      <a href="#contacto" class="mobile-link">Contacto</a>
+      <button class="btn btn-primary mobile-btn">Agendar Cita</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Sonrisas saludables para toda la familia</h1>
+        <p>Ofrecemos atención dental de calidad con tecnología avanzada y un equipo profesional comprometido con su bienestar.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-light" id="hero-appointment-btn">Agendar Cita</button>
+          <button class="btn btn-outline-light">Nuestros Servicios</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Bar -->
+    <section class="info-bar">
+      <div class="container">
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="info-content">
+            <h3>Horario de Atención</h3>
+            <p>Lun - Vie: 9:00 - 19:00</p>
+            <p>Sáb: 9:00 - 14:00</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="info-content">
+            <h3>Contáctenos</h3>
+            <p>+123 456 7890</p>
+            <p>info@dentalcare.com</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info-content">
+            <h3>Ubicación</h3>
+            <p>Av. Principal 123</p>
+            <p>Ciudad, País</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nuestros Servicios</h2>
+          <p>Ofrecemos una amplia gama de servicios dentales para satisfacer todas sus necesidades.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/48" alt="Limpieza Dental">
+            </div>
+            <h3>Limpieza Dental</h3>
+            <p>Eliminación de placa y sarro para prevenir caries y enfermedades de las encías.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/48" alt="Ortodoncia">
+            </div>
+            <h3>Ortodoncia</h3>
+            <p>Corrección de la posición de los dientes y mejora de la mordida con brackets o alineadores.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/48" alt="Implantes Dentales">
+            </div>
+            <h3>Implantes Dentales</h3>
+            <p>Reemplazo permanente de dientes perdidos con implantes de titanio y coronas.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/48" alt="Blanqueamiento">
+            </div>
+            <h3>Blanqueamiento</h3>
+            <p>Procedimientos para aclarar el color de los dientes y mejorar su sonrisa.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/48" alt="Endodoncia">
+            </div>
+            <h3>Endodoncia</h3>
+            <p>Tratamiento de conducto para salvar dientes con infección o daño en el nervio.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="https://via.placeholder.com/48" alt="Odontopediatría">
+            </div>
+            <h3>Odontopediatría</h3>
+            <p>Atención especializada para niños en un ambiente amigable y seguro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="nosotros" class="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="https://via.placeholder.com/600x400" alt="Equipo médico">
+          </div>
+          <div class="about-content">
+            <h2>Sobre Nosotros</h2>
+            <p>Con más de 15 años de experiencia, nuestro consultorio dental se ha convertido en un referente en atención odontológica de calidad. Contamos con un equipo de profesionales altamente calificados y comprometidos con la salud bucal de nuestros pacientes.</p>
+            <ul class="about-list">
+              <li><i class="fas fa-check-circle"></i> Equipo de especialistas certificados</li>
+              <li><i class="fas fa-check-circle"></i> Tecnología de vanguardia</li>
+              <li><i class="fas fa-check-circle"></i> Instalaciones modernas y confortables</li>
+              <li><i class="fas fa-check-circle"></i> Atención personalizada</li>
+              <li><i class="fas fa-check-circle"></i> Protocolos de bioseguridad estrictos</li>
+            </ul>
+            <button class="btn btn-primary">Conoce a Nuestro Equipo</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonios" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Lo Que Dicen Nuestros Pacientes</h2>
+          <p>La satisfacción de nuestros pacientes es nuestro mayor orgullo.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img src="https://via.placeholder.com/64" alt="María González">
+            </div>
+            <p class="testimonial-text">"Excelente atención y profesionalismo. Me sentí muy cómoda durante todo el tratamiento de ortodoncia. ¡Ahora tengo la sonrisa que siempre quise!"</p>
+            <h4 class="testimonial-name">María González</h4>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img src="https://via.placeholder.com/64" alt="Carlos Rodríguez">
+            </div>
+            <p class="testimonial-text">"Llevé a mis hijos para una revisión y quedé impresionado con la paciencia y amabilidad del personal. El consultorio es moderno y los niños se sintieron a gusto."</p>
+            <h4 class="testimonial-name">Carlos Rodríguez</h4>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img src="https://via.placeholder.com/64" alt="Laura Martínez">
+            </div>
+            <p class="testimonial-text">"Después de años de miedo al dentista, encontré este consultorio y cambió mi perspectiva. El Dr. Sánchez explicó todo el procedimiento y no sentí ningún dolor."</p>
+            <h4 class="testimonial-name">Laura Martínez</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container">
+        <h2>¿Listo para una sonrisa más saludable?</h2>
+        <p>Agende una cita hoy mismo y dé el primer paso hacia una mejor salud bucal.</p>
+        <button class="btn btn-light" id="cta-appointment-btn">Agendar Cita Ahora</button>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contáctenos</h2>
+          <p>Estamos aquí para responder a sus preguntas y programar su cita.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3>Dirección</h3>
+                <p>Av. Principal 123, Ciudad, País</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3>Teléfono</h3>
+                <p>+123 456 7890</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3>Email</h3>
+                <p>info@dentalcare.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-calendar"></i>
+              </div>
+              <div>
+                <h3>Horario</h3>
+                <p>Lun - Vie: 9:00 - 19:00</p>
+                <p>Sáb: 9:00 - 14:00</p>
+              </div>
+            </div>
+            <div class="map-container">
+              <div class="map-placeholder">Mapa de ubicación</div>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" id="name" placeholder="Su nombre">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="Su email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" placeholder="Su teléfono">
+              </div>
+              <div class="form-group">
+                <label for="service">Servicio de Interés</label>
+                <select id="service">
+                  <option value="">Seleccione un servicio</option>
+                  <option value="limpieza">Limpieza Dental</option>
+                  <option value="ortodoncia">Ortodoncia</option>
+                  <option value="implantes">Implantes Dentales</option>
+                  <option value="blanqueamiento">Blanqueamiento</option>
+                  <option value="endodoncia">Endodoncia</option>
+                  <option value="odontopediatria">Odontopediatría</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" placeholder="Su mensaje"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo">
+            <img src="https://via.placeholder.com/32" alt="Logo" class="logo-img">
+            <span class="logo-text">Dental Lux</span>
+          </div>
+          <p>Comprometidos con su salud bucal y bienestar desde hace más de 15 años.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-services">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="#">Limpieza Dental</a></li>
+            <li><a href="#">Ortodoncia</a></li>
+            <li><a href="#">Implantes Dentales</a></li>
+            <li><a href="#">Blanqueamiento</a></li>
+            <li><a href="#">Endodoncia</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Contacto</h3>
+          <ul>
+            <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad, País</li>
+            <li><i class="fas fa-phone"></i> +123 456 7890</li>
+            <li><i class="fas fa-envelope"></i> info@dentalcare.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year"></span> Dental Lux. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp ChatBot Button -->
+  <div class="chatbot-button">
+    <button class="btn-chatbot">
+      <i class="fab fa-whatsapp"></i>
+      <span class="chatbot-tooltip">ChatBot</span>
+    </button>
+  </div>
+
+  <!-- Auth Modal -->
+  <div class="modal" id="auth-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-auth-modal">&times;</span>
+      <div class="tabs">
+        <div class="tab-header">
+          <div class="tab-item active" data-tab="login">Iniciar Sesión</div>
+          <div class="tab-item" data-tab="register">Registrarse</div>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="login">
+            <h2>Iniciar Sesión</h2>
+            <p>Acceda a su cuenta para gestionar sus citas y tratamientos.</p>
+            <form id="login-form">
+              <div class="form-group">
+                <label for="email-login">Email</label>
+                <input type="email" id="email-login" placeholder="correo@ejemplo.com">
+              </div>
+              <div class="form-group">
+                <label for="password-login">Contraseña</label>
+                <input type="password" id="password-login">
+              </div>
+              <div class="form-row between">
+                <div class="form-check">
+                  <input type="checkbox" id="remember">
+                  <label for="remember">Recordarme</label>
+                </div>
+                <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+              <p class="form-footer">¿No tiene una cuenta? <a href="#" class="switch-tab" data-tab="register">Regístrese</a></p>
+            </form>
+          </div>
+          <div class="tab-pane" id="register">
+            <h2>Crear una cuenta</h2>
+            <p>Regístrese para gestionar sus citas y acceder a beneficios exclusivos.</p>
+            <form id="register-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first-name">Nombre</label>
+                  <input type="text" id="first-name" placeholder="Juan">
+                </div>
+                <div class="form-group">
+                  <label for="last-name">Apellido</label>
+                  <input type="text" id="last-name" placeholder="Pérez">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email-register">Email</label>
+                <input type="email" id="email-register" placeholder="correo@ejemplo.com">
+              </div>
+              <div class="form-group">
+                <label for="phone-register">Teléfono</label>
+                <input type="tel" id="phone-register" placeholder="+123 456 7890">
+              </div>
+              <div class="form-group">
+                <label for="password-register">Contraseña</label>
+                <input type="password" id="password-register">
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirmar Contraseña</label>
+                <input type="password" id="confirm-password">
+              </div>
+              <div class="form-check">
+                <input type="checkbox" id="terms">
+                <label for="terms">Acepto los <a href="#">términos y condiciones</a></label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Crear Cuenta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Modal -->
+  <div class="modal" id="appointment-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-appointment-modal">&times;</span>
+      <div id="appointment-form-container">
+        <h2>Agendar una Cita</h2>
+        <p>Complete el formulario para solicitar una cita con nuestros especialistas.</p>
+        <form id="appointment-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointment-name">Nombre completo</label>
+              <input type="text" id="appointment-name" placeholder="Juan Pérez" required>
+            </div>
+            <div class="form-group">
+              <label for="appointment-phone">Teléfono</label>
+              <input type="tel" id="appointment-phone" placeholder="+123 456 7890" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="appointment-email">Email</label>
+            <input type="email" id="appointment-email" placeholder="correo@ejemplo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="appointment-service">Servicio</label>
+            <select id="appointment-service" required>
+              <option value="">Seleccione un servicio</option>
+              <option value="limpieza">Limpieza Dental</option>
+              <option value="ortodoncia">Ortodoncia</option>
+              <option value="implantes">Implantes Dentales</option>
+              <option value="blanqueamiento">Blanqueamiento</option>
+              <option value="endodoncia">Endodoncia</option>
+              <option value="odontopediatria">Odontopediatría</option>
+              <option value="consulta">Consulta General</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="appointment-date">Fecha preferida</label>
+              <input type="date" id="appointment-date" required>
+            </div>
+            <div class="form-group">
+              <label for="appointment-time">Hora preferida</label>
+              <select id="appointment-time" required disabled>
+                <option value="">Seleccione hora</option>
+                <optgroup label="Mañana">
+                  <option value="09:00">09:00</option>
+                  <option value="09:30">09:30</option>
+                  <option value="10:00">10:00</option>
+                  <option value="10:30">10:30</option>
+                  <option value="11:00">11:00</option>
+                  <option value="11:30">11:30</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                </optgroup>
+                <optgroup label="Tarde">
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="appointment-notes">Notas adicionales</label>
+            <textarea id="appointment-notes" placeholder="Describa brevemente su motivo de consulta o cualquier información relevante para su cita."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submit-appointment">Solicitar Cita</button>
+        </form>
+      </div>
+      <div id="appointment-success" class="hidden">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3>¡Solicitud Enviada!</h3>
+        <p>Hemos recibido su solicitud de cita. Nos pondremos en contacto con usted pronto para confirmar los detalles.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
