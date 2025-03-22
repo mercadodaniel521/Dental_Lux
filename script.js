@@ -17,6 +17,34 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+
+  // Función para guardar una cita
+async function saveAppointment(appointmentData) {
+  try {
+    const { data, error } = await supabaseClient
+      .from('appointments')
+      .insert([
+        {
+          patient_name: appointmentData.name,
+          patient_email: appointmentData.email,
+          patient_phone: appointmentData.phone,
+          service: appointmentData.service,
+          appointment_date: appointmentData.date,
+          appointment_time: appointmentData.time,
+          notes: appointmentData.notes,
+          status: 'pending'
+        }
+      ]);
+    
+    if (error) throw error;
+    return { success: true, data };
+  } catch (error) {
+    console.error('Error al guardar la cita:', error.message);
+    return { success: false, error: error.message };
+  }
+}
+  //fin funcion
+
   // Auth Modal
   const authBtn = document.getElementById("auth-btn")
   const authModal = document.getElementById("auth-modal")
