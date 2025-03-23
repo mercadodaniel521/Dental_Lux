@@ -155,7 +155,7 @@ appointmentForm.addEventListener('submit', async function(e) {
     appointment_time: document.getElementById('appointment-time').value,
     notes: document.getElementById('appointment-notes').value,
     status: 'pending'
-  };
+  }
   
   try {
     // Insertar datos en Supabase
