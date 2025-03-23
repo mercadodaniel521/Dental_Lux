@@ -140,11 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
 appointmentForm.addEventListener('submit', async function(e) {
   e.preventDefault();
 
-    // Evitar envíos múltiples
-  if (isSubmitting) {
-    console.log('Ya se está procesando el envío');
-    return;
-  }
   
   // Disable submit button and show loading state
   const submitBtn = document.getElementById('submit-appointment');
