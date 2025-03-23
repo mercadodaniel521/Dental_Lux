@@ -161,40 +161,67 @@ async function saveAppointment(appointmentData) {
   const dd = String(today.getDate()).padStart(2, "0")
   appointmentDate.min = `${yyyy}-${mm}-${dd}`
 
-  // Appointment form submission
-  appointmentForm.addEventListener("submit", (e) => {
-    e.preventDefault()
-
-    // Disable submit button and show loading state
-    const submitBtn = document.getElementById("submit-appointment")
-    submitBtn.disabled = true
-    submitBtn.textContent = "Enviando..."
-
-    // Simulate form submission - in a real app, this would make an API call
+// Appointment form submission
+appointmentForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  // Disable submit button and show loading state
+  const submitBtn = document.getElementById('submit-appointment');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Enviando...';
+  
+  // Recopilar datos del formulario
+  const appointmentData = {
+    patient_name: document.getElementById('appointment-name').value,
+    patient_email: document.getElementById('appointment-email').value,
+    patient_phone: document.getElementById('appointment-phone').value,
+    service: document.getElementById('appointment-service').value,
+    appointment_date: document.getElementById('appointment-date').value,
+    appointment_time: document.getElementById('appointment-time').value,
+    notes: document.getElementById('appointment-notes').value,
+    status: 'pending'
+  };
+  
+  try {
+    // Insertar datos en Supabase
+    const { data, error } = await supabaseClient
+      .from('appointments')
+      .insert([appointmentData]);
+    
+    if (error) throw error;
+    
+    // Mostrar mensaje de éxito
+    appointmentFormContainer.style.display = 'none';
+    appointmentSuccess.classList.remove('hidden');
+    
+    // Resetear formulario
+    appointmentForm.reset();
+    appointmentTime.disabled = true;
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Solicitar Cita';
+    
+    // Cerrar modal después de un tiempo
     setTimeout(() => {
-      // Show success message
-      appointmentFormContainer.style.display = "none"
-      appointmentSuccess.classList.remove("hidden")
-
-      // Reset form
-      appointmentForm.reset()
-      appointmentTime.disabled = true
-      submitBtn.disabled = false
-      submitBtn.textContent = "Solicitar Cita"
-
-      // Close modal after delay
+      appointmentModal.classList.remove('active');
+      document.body.style.overflow = '';
+      
       setTimeout(() => {
-        appointmentModal.classList.remove("active")
-        document.body.style.overflow = ""
+        appointmentFormContainer.style.display = 'block';
+        appointmentSuccess.classList.add('hidden');
+      }, 300);
+    }, 3000);
+    
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Error al agendar cita: ' + error.message);
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Solicitar Cita';
+  }
+})
 
-        // Reset view for next time
-        setTimeout(() => {
-          appointmentFormContainer.style.display = "block"
-          appointmentSuccess.classList.add("hidden")
-        }, 300)
-      }, 3000)
-    }, 1500)
-  })
+//fin cita
+
+  
 
   // Close modals when clicking outside
   window.addEventListener("click", (e) => {
